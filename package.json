@@ -1,0 +1,16 @@
+{
+  "name": "agrovoice-ai",
+  "version": "1.0.0",
+  "description": "AgroVoice AI - Critical Agricultural Alerts, Delivered by Voice",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"blue.bold,green.bold\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed:admin": "npm run seed:admin --prefix server",
+    "seed:demo": "npm run seed:demo --prefix server",
+    "test": "npm run test --prefix server",
+    "install:all": "npm install && (cd server && npm install) && (cd client && npm install)"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
